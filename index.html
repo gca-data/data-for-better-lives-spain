@@ -15,7 +15,7 @@
     header {
       background: #003399;
       color: white;
-      padding: 3rem 1.5rem;
+      padding: 3rem 1.5rem 2rem 1.5rem;
       text-align: center;
     }
     header h1 {
@@ -23,10 +23,29 @@
       font-size: 2.2rem;
     }
     header p {
-      margin: 0;
-      font-size: 1.1rem;
+      margin: 0.2rem 0;
+      font-size: 1.05rem;
       opacity: 0.9;
     }
+    .lang-toggle {
+      margin-top: 1rem;
+    }
+    .lang-toggle button {
+      background: white;
+      border: none;
+      padding: 0.4rem 0.9rem;
+      margin: 0 0.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: #003399;
+    }
+    .lang-toggle button.active {
+      background: #ffcc00;
+      color: #003399;
+      font-weight: 600;
+    }
+
     main {
       max-width: 900px;
       margin: 2rem auto 3rem auto;
@@ -46,19 +65,24 @@
       margin-top: 0;
     }
     ul {
-      padding-left: 1.25rem;
+      padding-left: 1.2rem;
       margin-top: 0.5rem;
     }
     li {
-      margin-bottom: 0.9rem;
+      margin-bottom: 0.85rem;
     }
     .point-title {
       font-weight: 600;
     }
     .point-text {
-      margin-left: 1rem;   /* <- indentation under each point */
+      margin-left: 0.4rem;  /* softer indentation */
       margin-top: 0.2rem;
     }
+    .point-text ul {
+      margin-top: 0.35rem;
+      margin-left: 1rem;
+    }
+
     .infographic {
       text-align: center;
       padding: 0 1.75rem 1.75rem 1.75rem;
@@ -68,6 +92,16 @@
       border-radius: 6px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     }
+
+    .card {
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      padding: 1.5rem 1.75rem;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-radius: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -80,9 +114,26 @@
   <header>
     <h1>Data for Better Lives in Spain</h1>
     <p>A Proposal to Build a National Culture of Data</p>
+
+    <div class="lang-toggle">
+      <button id="btn-en" class="active">EN</button>
+      <button id="btn-es">ES</button>
+    </div>
   </header>
 
   <main>
+    <!-- ABOUT THIS PROJECT -->
+    <section>
+      <h2>About this project</h2>
+      <p>
+        This website is a personal, academic proposal that builds on a memo titled
+        <em>“Strengthening Data Literacy Across Senior Public Sector Leadership”</em>. It is inspired by the
+        <strong>World Development Report 2021: Data for Better Lives</strong> and aims to illustrate how a
+        country could promote a stronger culture of data in its public institutions. It does not represent any
+        official government position.
+      </p>
+    </section>
+
     <!-- SECTION 1 -->
     <section>
       <h2>1. How Data Is Transforming Development in Spain</h2>
@@ -299,47 +350,45 @@
     </section>
   </main>
 
-    <!-- WDR 2021 link / further reading -->
-    <section class="card">
-      <h2 data-lang="en">Further reading: World Development Report 2021</h2>
-      <h2 data-lang="es">Para saber más: Informe sobre el Desarrollo Mundial 2021</h2>
+  <!-- WDR 2021 / FURTHER READING CARD -->
+  <section class="card">
+    <h2 data-lang="en">Further reading: World Development Report 2021</h2>
+    <h2 data-lang="es">Para saber más: Informe sobre el Desarrollo Mundial 2021</h2>
 
-      <p data-lang="en">
-        This proposal is inspired by the
-        <strong>World Development Report 2021: Data for Better Lives</strong>, which explores how countries can
-        harness data for development while protecting people from harm. You can read the report and explore
-        its data stories here:
-      </p>
-      <p data-lang="es">
-        Esta propuesta se inspira en el
-        <strong>Informe sobre el Desarrollo Mundial 2021: Datos para mejorar vidas</strong>, que analiza cómo los países
-        pueden aprovechar los datos para el desarrollo protegiendo al mismo tiempo a las personas frente a posibles daños.
-        Puedes consultar el informe y sus historias de datos aquí:
-      </p>
+    <p data-lang="en">
+      This proposal is inspired by the
+      <strong>World Development Report 2021: Data for Better Lives</strong>, which explores how countries can
+      harness data for development while protecting people from harm. You can read the report and explore
+      its data stories here:
+    </p>
+    <p data-lang="es">
+      Esta propuesta se inspira en el
+      <strong>Informe sobre el Desarrollo Mundial 2021: Datos para mejorar vidas</strong>, que analiza cómo los países
+      pueden aprovechar los datos para el desarrollo protegiendo al mismo tiempo a las personas frente a posibles daños.
+      Puedes consultar el informe y sus historias de datos aquí:
+    </p>
 
-      <p>
-        <a href="https://www.worldbank.org/en/publication/wdr2021" target="_blank">
-          World Development Report 2021: Data for Better Lives
-        </a>
-        <br>
-        <a href="https://wdr2021.worldbank.org/" target="_blank">
-          WDR 2021 interactive website
-        </a>
-      </p>
-    </section>
-  </main>
+    <p>
+      <a href="https://www.worldbank.org/en/publication/wdr2021" target="_blank">
+        World Development Report 2021: Data for Better Lives
+      </a>
+      <br />
+      <a href="https://wdr2021.worldbank.org/" target="_blank">
+        WDR 2021 interactive website
+      </a>
+    </p>
+  </section>
 
   <footer>
     <span data-lang="en">
       Personal academic project inspired by WDR 2021 – not an official position of any government or institution.
     </span>
-    <span data-lang="es">
+    <span data-lang="es" style="display:none;">
       Proyecto académico personal inspirado en el WDR 2021 – no representa la posición oficial de ningún gobierno ni institución.
     </span>
   </footer>
 
   <script>
-    // Simple language toggle
     const btnEn = document.getElementById('btn-en');
     const btnEs = document.getElementById('btn-es');
 
@@ -351,6 +400,7 @@
           el.style.display = 'none';
         }
       });
+
       if (lang === 'en') {
         btnEn.classList.add('active');
         btnEs.classList.remove('active');
@@ -368,10 +418,3 @@
   </script>
 </body>
 </html>
-
-  <footer>
-    &copy; 2025 · Data for Better Lives in Spain – Educational Project
-  </footer>
-</body>
-</html>
-
