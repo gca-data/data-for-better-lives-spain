@@ -5,101 +5,74 @@
   <title>Data for Better Lives in Spain</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root {
-      --blue: #003399;
-      --light-blue: #f5f7fb;
-      --text: #222222;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      background: var(--light-blue);
-      color: var(--text);
+      background: #f5f7fb;
+      color: #222;
       line-height: 1.6;
     }
-
     header {
-      background: var(--blue);
-      color: #ffffff;
-      text-align: center;
+      background: #003399;
+      color: white;
       padding: 3rem 1.5rem;
+      text-align: center;
     }
-
     header h1 {
       margin: 0 0 0.5rem 0;
       font-size: 2.2rem;
     }
-
     header p {
       margin: 0;
       font-size: 1.1rem;
       opacity: 0.9;
     }
-
     main {
-      max-width: 960px;
+      max-width: 900px;
       margin: 2rem auto 3rem auto;
       padding: 0 1.5rem;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-radius: 8px;
     }
-
-    .card {
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-      padding: 2rem;
-      margin-bottom: 1.5rem;
+    section {
+      padding: 1.75rem 1.75rem 0 1.75rem;
     }
-
+    section:last-of-type {
+      padding-bottom: 1.75rem;
+    }
     h2 {
-      color: var(--blue);
+      color: #003399;
       margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
     }
-
-    h3 {
-      margin-bottom: 0.25rem;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-    }
-
-    p {
-      margin-top: 0.4rem;
-      margin-bottom: 0.8rem;
-    }
-
     ul {
-      padding-left: 1.2rem;
-      margin-top: 0.2rem;
-      margin-bottom: 0.8rem;
+      padding-left: 1.25rem;
+      margin-top: 0.5rem;
     }
-
     li {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.9rem;
     }
-
-    .check {
-      color: #008000;
+    .point-title {
       font-weight: 600;
     }
-
+    .point-text {
+      margin-left: 1rem;   /* <- indentation under each point */
+      margin-top: 0.2rem;
+    }
+    .infographic {
+      text-align: center;
+      padding: 0 1.75rem 1.75rem 1.75rem;
+    }
+    .infographic img {
+      max-width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
     footer {
       text-align: center;
       padding: 1.5rem;
-      font-size: 0.85rem;
-      color: #555555;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
+      font-size: 0.9rem;
+      color: #555;
     }
   </style>
 </head>
@@ -110,216 +83,224 @@
   </header>
 
   <main>
-    <!-- Section 1 -->
-    <section class="card">
+    <!-- SECTION 1 -->
+    <section>
       <h2>1. How Data Is Transforming Development in Spain</h2>
       <p>
-        Spain is undergoing a profound digital transformation driven by mobility
-        data, health information systems, financial platforms, and satellite
-        imagery. Data already contributes to better decision-making in areas
-        such as:
-      </p>
-
-      <h3><span class="check">✔</span> Mobility and transport efficiency (Madrid, Barcelona)</h3>
-      <p>
-			Real-time mobility data from buses, metros, and navigation apps
-			optimizes transport flows.
-      </p>
-
-      <h3><span class="check">✔</span> Climate and wildfire management</h3>
-      <p>
-			Earth observation data is used by the Generalitat and national agencies
-			to predict fire risk and water scarcity.
-      </p>
-
-      <h3><span class="check">✔</span> Health system modernization (SNS &amp; autonomous regions)</h3>
-      <p>
-			The digitalization of medical records improves service coordination,
-			especially in remote and aging regions.
-      </p>
-
-      <h3><span class="check">✔</span> Tourism and economic planning</h3>
-      <p>
-			Private intent data from hotels, booking platforms, and telecoms helps
-			understand seasonal dynamics and local economic activity.
-      </p>
-
-      <p>
-        Spain has the data. The next step is ensuring the public sector
-        leadership has the literacy, confidence, and institutional support
-        needed to turn these data assets into better policies.
-      </p>
-    </section>
-
-    <!-- Section 2 -->
-    <section class="card">
-      <h2>2. The Challenge: Spain Still Lacks a Strong, Coherent Data Culture</h2>
-      <p>
-        Despite progress, several barriers still limit the country’s ability to
-        fully leverage its data ecosystem:
+        Spain is undergoing a profound digital transformation driven by mobility data, health information
+        systems, financial platforms, and satellite imagery. Data already contributes to better
+        decision-making in several key sectors:
       </p>
       <ul>
         <li>
-          <strong>Fragmentation across autonomous communities</strong><br />
-          Health, transport, and education data often remain siloed due to
-          governance and interoperability gaps.
+          <div class="point-title">✔ Mobility and transport efficiency (Madrid, Barcelona)</div>
+          <div class="point-text">
+            Real-time mobility data from buses, metros, and navigation apps helps optimize transport flows
+            and manage congestion.
+          </div>
         </li>
         <li>
-          <strong>Uneven levels of data literacy among senior officials</strong
-          ><br />
-          Many leaders rely on traditional reports rather than real-time
-          analytics or private data partnerships.
+          <div class="point-title">✔ Climate and wildfire management</div>
+          <div class="point-text">
+            Earth observation data is used by the Generalitat and national agencies to predict fire risk,
+            water scarcity, and other climate-related threats.
+          </div>
         </li>
         <li>
-          <strong>Limited reuse of private intent data</strong><br />
-          Telecom mobility, platform transaction data, or digital payments
-          remain underutilized for policy design.
+          <div class="point-title">✔ Health system modernization (SNS & autonomous regions)</div>
+          <div class="point-text">
+            The digitalization of medical records improves coordination across levels of care, especially
+            in remote and aging regions.
+          </div>
         </li>
         <li>
-          <strong>Insufficient public understanding and trust</strong><br />
-          Citizens express concerns about privacy, algorithmic bias, and the use
-          of their data by government institutions.
-        </li>
-        <li>
-          <strong
-            >Lack of a central institution to coordinate data
-            governance</strong
-          ><br />
-          Multiple ministries have overlapping responsibilities without a
-          unified framework.
+          <div class="point-title">✔ Tourism and economic planning</div>
+          <div class="point-text">
+            Private intent data from hotels, booking platforms, and telecoms helps understand seasonal
+            dynamics and local economic activity.
+          </div>
         </li>
       </ul>
       <p>
-        Spain has enormous potential — but needs a clear, coordinated national
-        strategy for building a culture of data across its public institutions.
+        Spain already has the data. The next step is ensuring that public sector leadership has the literacy,
+        confidence, and institutional support needed to turn these data assets into better policies.
       </p>
     </section>
 
-    <!-- Section 3 -->
-    <section class="card">
+    <!-- INFOGRAPHIC -->
+    <div class="infographic">
+      <!-- Make sure infographic.png is in the same folder as index.html -->
+      <img src="infographic.png" alt="Data for Better Lives in Spain infographic">
+    </div>
+
+    <!-- SECTION 2 -->
+    <section>
+      <h2>2. The Challenge: Spain Still Lacks a Strong, Coherent Data Culture</h2>
+      <p>Despite progress, several barriers still limit Spain’s ability to fully leverage its data ecosystem:</p>
+      <ul>
+        <li>
+          <div class="point-title">• Fragmentation across autonomous communities</div>
+          <div class="point-text">
+            Health, transport, and education data often remain siloed due to governance and interoperability
+            gaps between regions and institutions.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">• Uneven levels of data literacy among senior officials</div>
+          <div class="point-text">
+            Many leaders continue to rely on traditional reports rather than real-time analytics
+            or structured partnerships with private data holders.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">• Limited reuse of private intent data</div>
+          <div class="point-text">
+            Telecom mobility data, platform transaction data, and digital payments remain underutilized
+            for policy design and evaluation.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">• Insufficient public understanding and trust</div>
+          <div class="point-text">
+            Citizens express concerns about privacy, algorithmic bias, and how government institutions
+            use their data.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">• Lack of a central institution to coordinate data governance</div>
+          <div class="point-text">
+            Multiple ministries and agencies have overlapping responsibilities without a unified framework
+            or clear leadership on data governance.
+          </div>
+        </li>
+      </ul>
+      <p>
+        Spain has enormous potential, but it needs a clear, coordinated national strategy for building a culture
+        of data across its public institutions.
+      </p>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section>
       <h2>3. Proposed Solution: Create a National Data Leadership Program for Spain</h2>
       <p>
-        The National Data Leadership Program (NDLP) would build Spain’s capacity
-        to use data ethically, effectively, and strategically across all levels
-        of government.
-      </p>
-
-      <h3>1️⃣ High-Level Training for Senior Leadership</h3>
-      <p>Equip ministers, secretaries-general, and regional leadership with skills to:</p>
-      <ul>
-        <li>understand modern data sources (public + private intent data);</li>
-        <li>interpret analytics for decisions;</li>
-        <li>encourage responsible experimentation; and</li>
-        <li>ensure privacy and ethical use.</li>
-      </ul>
-      <p>
-        This program would be practical, case-based, and aligned with the
-        Spanish public administration context.
-      </p>
-
-      <h3>2️⃣ A Unified National Data Governance Framework</h3>
-      <p>
-        Spain needs a coherent, nationwide data governance strategy that
-        includes:
+        The National Data Leadership Program (NDLP) would build Spain’s capacity to use data ethically,
+        effectively, and strategically across all levels of government.
       </p>
       <ul>
-        <li>interoperability standards across autonomous communities;</li>
         <li>
-          clear legal frameworks for responsible public–private data sharing;
+          <div class="point-title">1️⃣ High-Level Training for Senior Leadership</div>
+          <div class="point-text">
+            Equip ministers, secretaries-general, and regional leaders with skills to:
+            <ul>
+              <li>Understand modern data sources (public and private intent data).</li>
+              <li>Interpret analytics for decision-making.</li>
+              <li>Encourage responsible experimentation and innovation.</li>
+              <li>Ensure privacy and ethical use of data in line with GDPR.</li>
+            </ul>
+            This program would be practical, case-based, and aligned with the Spanish public administration context.
+          </div>
         </li>
-        <li>privacy-by-design principles consistent with GDPR; and</li>
         <li>
-          unified oversight under a dedicated National Data Authority.
+          <div class="point-title">2️⃣ A Unified National Data Governance Framework</div>
+          <div class="point-text">
+            Spain needs a coherent, nationwide data governance strategy that includes:
+            <ul>
+              <li>Interoperability standards across autonomous communities.</li>
+              <li>Clear legal frameworks for responsible public–private data sharing.</li>
+              <li>Privacy-by-design principles consistent with GDPR.</li>
+              <li>Unified oversight under a dedicated National Data Authority.</li>
+            </ul>
+            This framework will build consistency, trust, and data portability across the country.
+          </div>
         </li>
-      </ul>
-      <p>
-        This builds consistency, trust, and data portability across the country.
-      </p>
-
-      <h3>3️⃣ Partnerships With Universities, Startups, and Large Data Holders</h3>
-      <p>
-        Spain has world-class institutions (CSIC, universities, Telefónica,
-        BBVA, Santander) that already analyze massive datasets.
-      </p>
-      <p>The government can:</p>
-      <ul>
-        <li>collaborate on mobility, financial inclusion, and climate models;</li>
         <li>
-          negotiate privacy-safe access to anonymized mobility and platform
-          data; and
+          <div class="point-title">3️⃣ Partnerships With Universities, Startups, and Large Data Holders</div>
+          <div class="point-text">
+            Spain has world-class institutions (CSIC, universities, Telefónica, BBVA, Santander) that already
+            analyze large datasets. The government can:
+            <ul>
+              <li>Collaborate on mobility, financial inclusion, and climate models.</li>
+              <li>Negotiate privacy-safe access to anonymized mobility and platform data.</li>
+              <li>Support evidence-based regional development policies.</li>
+            </ul>
+            This ensures data-driven innovation benefits all regions, not just Madrid and Barcelona.
+          </div>
         </li>
-        <li>support evidence-based regional development policies.</li>
+        <li>
+          <div class="point-title">4️⃣ National Open-Data Platform 2.0</div>
+          <div class="point-text">
+            Spain’s open-data portals are strong but can be modernized to:
+            <ul>
+              <li>Include more real-time datasets.</li>
+              <li>Add visual dashboards for citizens and decision-makers.</li>
+              <li>Integrate regional and municipal datasets.</li>
+              <li>Allow secure researcher access through APIs.</li>
+            </ul>
+            This will reinforce transparency, reuse, and public trust.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">5️⃣ Applied “Learning by Doing” Pilots</div>
+          <div class="point-text">
+            Pilot projects can be deployed in:
+            <ul>
+              <li>Wildfire prediction and climate risk.</li>
+              <li>Hospital emergency optimization.</li>
+              <li>Poverty mapping in rural areas.</li>
+              <li>Coastal erosion and climate planning.</li>
+              <li>Public transport redesign in smaller cities.</li>
+            </ul>
+            These concrete applications will help institutions internalize the value of data and build lasting capacity.
+          </div>
+        </li>
       </ul>
-      <p>
-        This ensures data-driven innovation benefits all regions, not just
-        Madrid and Barcelona.
-      </p>
-
-      <h3>4️⃣ National Open-Data Platform 2.0</h3>
-      <p>
-        Spain’s open-data portals are strong but can be modernized to:
-      </p>
-      <ul>
-        <li>include more real-time datasets;</li>
-        <li>add visual dashboards for citizens;</li>
-        <li>integrate regional and municipal datasets; and</li>
-        <li>allow secure researcher access through APIs.</li>
-      </ul>
-      <p>This reinforces transparency and public trust.</p>
-
-      <h3>5️⃣ Applied “Learning by Doing” Pilots</h3>
-      <p>Pilot projects in:</p>
-      <ul>
-        <li>wildfire prediction;</li>
-        <li>hospital emergency optimization;</li>
-        <li>poverty mapping in rural areas;</li>
-        <li>coastal erosion and climate planning; and</li>
-        <li>public transport redesign in smaller cities.</li>
-      </ul>
-      <p>
-        These concrete applications help institutions internalize the value of
-        data.
-      </p>
     </section>
 
-    <!-- Section 4 -->
-    <section class="card">
+    <!-- SECTION 4 -->
+    <section>
       <h2>4. Policy Recommendations for Spain</h2>
-
-      <h3><span class="check">✔</span> Policy 1: Recognize Data as a Strategic Public Asset</h3>
-      <p>
-        Integrate data-driven decision-making into national development plans
-        and budget processes.
-      </p>
-
-      <h3><span class="check">✔</span> Policy 2: Establish a National Data Governance Authority</h3>
-      <p>
-        Centralize oversight, improve coordination across autonomous
-        communities, and ensure ethical data use.
-      </p>
-
-      <h3><span class="check">✔</span> Policy 3: Strengthen Data Skills Across All Levels of the Public Sector</h3>
-      <p>
-        A modern state requires leaders and frontline workers who are confident
-        users of data.
-      </p>
-
-      <h3><span class="check">✔</span> Policy 4: Promote Safe Access to Private Intent Data</h3>
-      <p>
-        Enable partnerships with telecoms, banks, and digital platforms to
-        support public-good projects under strict safeguards.
-      </p>
-
-      <h3><span class="check">✔</span> Policy 5: Build Public Trust Through Transparency and Communication</h3>
-      <p>
-        Explain clearly how data is used, ensure privacy protections, and
-        demonstrate real benefits for citizens.
-      </p>
+      <ul>
+        <li>
+          <div class="point-title">✔ Policy 1: Recognize Data as a Strategic Public Asset</div>
+          <div class="point-text">
+            Integrate data-driven decision-making into national development plans and budget processes.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">✔ Policy 2: Establish a National Data Governance Authority</div>
+          <div class="point-text">
+            Centralize oversight, improve coordination across autonomous communities, and ensure ethical
+            and consistent data use.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">✔ Policy 3: Strengthen Data Skills Across All Levels of the Public Sector</div>
+          <div class="point-text">
+            A modern state requires leaders and frontline workers who are confident users of data, supported
+            by ongoing training and institutional incentives.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">✔ Policy 4: Promote Safe Access to Private Intent Data</div>
+          <div class="point-text">
+            Enable partnerships with telecoms, banks, and digital platforms to support public-good projects
+            under strict privacy and security safeguards.
+          </div>
+        </li>
+        <li>
+          <div class="point-title">✔ Policy 5: Build Public Trust Through Transparency and Communication</div>
+          <div class="point-text">
+            Explain clearly how data is used, ensure robust privacy protections, and demonstrate tangible
+            benefits for citizens across Spain.
+          </div>
+        </li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    Data for Better Lives in Spain – Educational project
+    &copy; 2025 · Data for Better Lives in Spain – Educational Project
   </footer>
 </body>
 </html>
